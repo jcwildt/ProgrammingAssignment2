@@ -10,13 +10,13 @@ makeCacheMatrix <- function(x = matrix()) {
 	  xinv <<- NULL ## These lines of code are essentially the same as the makeVector function.
       }
       get <- function() x 
-      setInv <- function(inv) xinv <<- inv ## Here, instead of getting the mean like in makeVector,
-      ## it gets the inverse.
-      getInv <- function() xinv ## Again, I use the inverse as opposed to the mean.
+      setInv <- function(inv) xinv <<- inv ## Here, instead of setting the mean like in makeVector,
+      ## it sets the inverse.
+      getInv <- function() xinv ## Here, it gets the inverse (again, as opposed to the mean).
       list(set = set, get = get,
 	       setInv = setInv,
 	       getInv = getInv)
-	       ## This should set the value of the vector, get the value of the vector, and 
+	       ## These lines should set the value of the vector, get the value of the vector, and 
 	       ## set the value of the inverse, get the value of the inverse.
   }
 
